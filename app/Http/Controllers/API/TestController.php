@@ -17,6 +17,7 @@ class TestController extends Controller
         try {
 
             $problem = new Problem_one; 
+            
             $data= $problem->queenPositions($request);
             return response()->json([$data]);
 

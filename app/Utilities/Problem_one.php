@@ -4,8 +4,9 @@ namespace App\Utilities;
 class Problem_one 
 {
     public function queenPositions($request){
-        $queenX = $request->rq-1;
-        $queenY = $request->n-$request->cq;
+       
+        $queenX = $request->cq-1;
+        $queenY = $request->n-$request->rq;
         $obstaclesReal=$request->obstacles;
         
         $side=$request->n-1;
@@ -13,7 +14,7 @@ class Problem_one
         if($request->k>0){
            
             foreach ($obstaclesReal as $val){
-                $obstacles[]=[$val[0]-1,$side+1-$val[1]];
+                $obstacles[]=[$val[1]-1,$side+1-$val[0]];
             }
         }
         $limits=$this->calculateLimits($queenX, $queenY,$side, $obstacles);
