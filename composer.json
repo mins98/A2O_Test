@@ -22,11 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "files": [
-                "app/Utilities/Problem_one.php",
-                "app/Utilities/Problem_two.php"
-            ]
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
